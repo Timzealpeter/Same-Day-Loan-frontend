@@ -1,0 +1,144 @@
+.loan-page-wrapper {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+
+  .header-logo {
+    max-height: 55px;
+    width: auto;
+  }
+
+  .container-custom {
+    max-width: 1020px;
+    width: 92%;
+  }
+
+  // Marketing Sidebar Styling
+  .marketing-sidebar {
+    background: linear-gradient(135deg, #051e58 0%, #102a73 45%, #6a1a4c 100%);
+    min-height: 480px;
+    overflow: hidden;
+
+    .marketing-list {
+      li {
+        font-size: 1.05rem;
+        font-weight: 500;
+        i {
+          font-size: 1.25rem;
+          color: #38ef7d; /* Distinct green checkmark */
+        }
+      }
+    }
+
+    .sidebar-stats {
+      h3 {
+        font-size: 1.75rem;
+      }
+      small {
+        font-size: 0.78rem;
+        line-height: 1.3;
+      }
+    }
+
+    // Floating Overlay Graphic effect
+    .sidebar-bg-image-container {
+      position: absolute;
+      right: -10%;
+      bottom: -5%;
+      width: 80%;
+      height: 85%;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.85;
+
+      @media (max-width: 991.98px) {
+        display: none; // Hides complex overlay visual on tablet/mobile screens
+      }
+
+      .sidebar-bg-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: bottom right;
+      }
+    }
+
+    .z-1 {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  // Interactive Form Elements Styling
+  .success-icon-box {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  }
+
+  .input-group {
+    border: 1px solid #ced4da !important;
+    &:focus-within {
+      border-color: #0d6efd !important;
+      box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+    }
+    .input-group-text {
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+    input {
+      font-size: 1.25rem;
+      &::placeholder {
+        color: #adb5bd;
+      }
+    }
+  }
+
+  // Custom Selection Quick Cards
+  .option-card {
+    background-color: #fff;
+    border-color: #dee2e6 !important;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+
+    .radio-dot {
+      width: 16px;
+      height: 16px;
+      border: 2px solid #ced4da;
+      border-radius: 50%;
+      display: inline-block;
+      transition:
+        background-color 0.2s,
+        border-color 0.2s;
+    }
+
+    &:hover {
+      border-color: #bfa5c4 !important;
+      background-color: #f8f9fa;
+    }
+
+    &.active {
+      border-color: #0d6efd !important;
+      background-color: rgba(13, 110, 253, 0.03);
+
+      .radio-dot {
+        border-color: #0d6efd;
+        background-color: #0d6efd;
+        box-shadow: inset 0 0 0 3px #fff;
+      }
+    }
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+  .disclaimer-text {
+    font-size: 0.72rem;
+    line-height: 1.5;
+    letter-spacing: 0.01rem;
+  }
+}

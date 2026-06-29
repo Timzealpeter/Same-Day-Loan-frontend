@@ -1,0 +1,118 @@
+.faq-section {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+
+  .container-custom {
+    max-width: 1140px;
+    border-radius: 24px !important;
+  }
+
+  .text-navy {
+    color: #102a73;
+  }
+
+  .text-primary-blue {
+    color: #0d6efd;
+  }
+
+  .subtitle-text {
+    font-size: 0.95rem;
+    letter-spacing: 0.01rem;
+  }
+
+  .main-heading {
+    font-size: 2.6rem;
+    line-height: 1.2;
+    letter-spacing: -0.02rem;
+  }
+
+  .description-text {
+    font-size: 1.02rem;
+    line-height: 1.65;
+    color: #6c757d !important;
+    max-width: 440px;
+  }
+
+  /* --- Custom Minimalist Accordion Styling --- */
+  .custom-accordion {
+    .accordion-item-wrapper {
+      border-bottom: 1px solid #e9ecef;
+      padding: 1rem 0;
+      transition: all 0.25s ease;
+
+      &:first-child {
+        padding-top: 0;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+
+      // Changes color of the active text layout
+      &.active {
+        .faq-question-text {
+          color: #0d6efd;
+        }
+        .arrow-icon-box {
+          color: #0d6efd;
+        }
+      }
+    }
+
+    .accordion-trigger-btn {
+      background: none;
+      border: none;
+      padding: 0.75rem 0;
+      color: #343a40;
+      outline: none;
+      transition: color 0.2s ease;
+
+      &:hover .faq-question-text {
+        color: #0d6efd;
+      }
+    }
+
+    .faq-question-text {
+      font-size: 1.1rem;
+      letter-spacing: -0.01rem;
+      color: #212529;
+    }
+
+    .arrow-icon-box {
+      color: #6c757d;
+      display: flex;
+      align-items: center;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+      &.rotate-up {
+        transform: rotate(-180deg);
+      }
+    }
+
+    // Smooth CSS Transition Panel height limits
+    .accordion-content-panel {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition:
+        max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.3s ease;
+
+      &.show-panel {
+        max-height: 400px; /* Big enough placeholder limit for expansion content */
+        opacity: 1;
+      }
+    }
+
+    .accordion-content-inner {
+      padding: 0.5rem 0 1rem 0;
+      font-size: 0.98rem;
+      line-height: 1.7;
+      color: #5c677d !important;
+    }
+  }
+}
