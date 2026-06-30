@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5001/api";
+const BASE_URL = "https://same-day-loan-backend.vercel.app/api";
 
 // Create axios instance with default config
 const api = axios.create({
