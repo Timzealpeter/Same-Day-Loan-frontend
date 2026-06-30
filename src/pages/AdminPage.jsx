@@ -13,23 +13,14 @@ const AdminPage = () => {
     const fetchDetails = async () => {
       try {
         const res = await api.get("/details");
-        console.log("========== API RESPONSE ==========");
-        console.log(res.data);
-        console.log("Is array:", Array.isArray(res.data));
-        console.log("Has details array:", Array.isArray(res.data.details));
 
-        // Check if response data is an array
-        if (Array.isArray(res.data)) {
-          setDetails(res.data);
-        } else if (res.data && Array.isArray(res.data.details)) {
-          // If your API returns { details: [...] }
-          setDetails(res.data.details);
-        } else {
-          console.error("Unexpected response format:", res.data);
-          setError("Unexpected data format from server");
-        }
+        console.log("API Response:", res.data);
+
+        // Directly use the details array from the backend
+        setDetails(res.data.details);
       } catch (error) {
         console.error("Error fetching details:", error);
+
         setError(
           error.response?.data?.message ||
             error.message ||
@@ -39,6 +30,7 @@ const AdminPage = () => {
         setLoading(false);
       }
     };
+
     fetchDetails();
   }, []);
 
