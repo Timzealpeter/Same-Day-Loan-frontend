@@ -13,7 +13,10 @@ const AdminPage = () => {
     const fetchDetails = async () => {
       try {
         const res = await api.get("/details");
-        console.log("Response data:", res.data);
+        console.log("========== API RESPONSE ==========");
+        console.log(res.data);
+        console.log("Is array:", Array.isArray(res.data));
+        console.log("Has details array:", Array.isArray(res.data.details));
 
         // Check if response data is an array
         if (Array.isArray(res.data)) {
